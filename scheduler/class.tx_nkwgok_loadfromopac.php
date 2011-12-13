@@ -43,7 +43,7 @@ class tx_nkwgok_loadFromOpac extends tx_scheduler_Task {
 			unlink($file);
 		}
 
-		$opacLKLURL = $opacBaseURL . 'CMD?ACT=SRCHA/IKT=8600/TRM=tev+not+LKL+p%3F/REC=2/PRS=XML/NORND=1';
+		$opacLKLURL = $opacBaseURL . 'PRS=XML/REC=2/NORND=1/CMD?ACT=SRCHA/IKT=8600/TRM=tev';
 		$success = $this->downloadLKLDataFromOpacToFolder($opacLKLURL, $LKLDir);
 
 		// Create the hitcounts folder if necessary and delete all files inside it if it exists.
